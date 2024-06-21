@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Optimization;
 
-namespace Shadow_shop
+namespace Shadow_shop.App_Start
 {
     public class BundleConfiguration
     {
