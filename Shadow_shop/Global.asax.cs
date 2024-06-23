@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-//using Shadow_shop.App_Start;
+using Shadow_shop.App_Start;
 
 namespace Shadow_shop
 {
@@ -17,6 +17,9 @@ namespace Shadow_shop
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
             BundleConfiguration.RegisterBundle(BundleTable.Bundles);
+
+
+            AutoMapperConfig.Configuration();
 
         }
     }
