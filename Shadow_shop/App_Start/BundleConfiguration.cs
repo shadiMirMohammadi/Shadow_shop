@@ -14,7 +14,7 @@ namespace Shadow_shop.App_Start
                     "~/Content/bootstrap-grid.min.css",
                     "~/Content/bootstrap-rtl.min.css",
                     "~/Content/bootstrap.min.css",
-                    "~/Content/site.css"
+                    "~/Content/Site.css"
                 ));
 
 
