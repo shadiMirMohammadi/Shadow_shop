@@ -18,12 +18,11 @@ namespace Shadow_shop.Areas.Admin.Controllers
     {
         readonly private CmsContext db = new CmsContext();
         readonly RoleService _RoleService;
-
-
         public RolesController()
         {
             _RoleService = new RoleService(db);
         }
+
 
         public ActionResult Index()
         {
@@ -32,19 +31,8 @@ namespace Shadow_shop.Areas.Admin.Controllers
             return View(roleListViewModel);
         }
 
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Role role = _RoleService.GetEntity(id.Value);
-            if (role == null)
-            {
-                return HttpNotFound();
-            }
-            return View(role);
-        }
+       
+
 
         public ActionResult Create()
         {
@@ -54,17 +42,20 @@ namespace Shadow_shop.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Title")] Role role)
+        public ActionResult Create([Bind(Include = "Id,Title")] RoleViewModel roleViewModel)
         {
             if (ModelState.IsValid)
             {
+                Role role = AutoMapperConfig.mapper.Map<RoleViewModel, Role>(roleViewModel);
                 _RoleService.Add(role);
                 _RoleService.Save();
                 return RedirectToAction("Index");
             }
 
-            return View(role);
+            return View(roleViewModel);
         }
+
+
 
 
         public ActionResult Edit(int? id)
@@ -78,47 +69,27 @@ namespace Shadow_shop.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            return View(role);
+            var roleViewModel = AutoMapperConfig.mapper.Map<Role, RoleViewModel>(role);
+            return View(roleViewModel);
         }
 
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Title")] Role role)
+        public ActionResult Edit([Bind(Include = "Id,Title")] RoleViewModel roleViewModel)
         {
             if (ModelState.IsValid)
             {
+                var role = AutoMapperConfig.mapper.Map<RoleViewModel, Role>(roleViewModel);
                 _RoleService.Update(role);
                 _RoleService.Save();
                 return RedirectToAction("Index");
             }
-            return View(role);
-        }
-
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Role role = _RoleService.GetEntity(id.Value);
-            if (role == null)
-            {
-                return HttpNotFound();
-            }
-            return View(role);
+            return View(roleViewModel);
         }
 
 
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Role role = _RoleService.GetEntity(id);
-            _RoleService.Delete(role);
-            _RoleService.Save();
-            return RedirectToAction("Index");
-        }
+
 
         protected override void Dispose(bool disposing)
         {

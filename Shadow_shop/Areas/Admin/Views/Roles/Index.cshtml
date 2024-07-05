@@ -1,33 +1,43 @@
 ﻿@model IEnumerable<Shadow_shop.Views.ViewModels.RoleViewModel>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = " نقش های کاربری |";
+    int count = 1;
 }
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
+<div class="index">
+    <div>
+        <h1>لیست نقش های کاربری</h1>
+        <div>
+            @Html.ActionLink("ثبت نقش جدید", "Create", null, new { @class = "btn-color btn btn-success" })
+        </div>
+    </div>
+    <div class="flex-space-around">
+        <div class="table-col">
+            ردیف
+        </div>
+        <div class="table-col">
             @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th></th>
-    </tr>
+        </div>
+        <div class="table-col-operation width-140">
+            عملیات
+        </div>
+    </div>
+    @foreach (var item in Model)
+    {
+        <div class="flex-space-around">
+            <div class="table-col">
+                @count
+            </div>
+            <div class="table-col">
+                @Html.DisplayFor(modelItem => item.Title)
+            </div>
+            <div class="table-col-operation width-140 ">
+                @Html.ActionLink("ویرایش", "Edit", new { id = item.Id }, new { @class = "btn btn-warning" })
+            </div>
+        </div>
+        count++;
+    }
+</div>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
-
-</table>
+<script src="~/Scripts/site.js"></script>

@@ -71,6 +71,8 @@ li {
     box-sizing: border-box;
 }
 
+
+
 .margin-r-5 {
     margin-right: 5px !important;
 }
@@ -80,22 +82,21 @@ li {
 .margin-20 {
     margin: 20px !important;
 }
-
 .margin-l-5 {
     margin-left: 5px !important;
 }
-
 .margin-b-5 {
     margin-bottom: 5px !important;
 }
-
 .margin-t-5 {
     margin-top: 5px !important;
 }
-
 .margin-r-20 {
     margin-right: 20px !important;
 }
+
+
+
 
 .dashboard-admin-top ul li:first-child span, .header-home > div:first-child span {
     font-family: 'Butterfly Kids', cursive;
@@ -105,10 +106,19 @@ li {
 
 
 
+
+
 .flex-space-around {
     display: flex;
     justify-content: space-around;
 }
+.flex-right {
+    display: flex;
+    justify-content: right !important;
+}
+
+
+
 
 .table-col {
     width: 154px;
@@ -123,6 +133,8 @@ li {
     justify-content: center;
 }
 
+
+
 .color-grean {
     color: #1bff54;
 }
@@ -130,6 +142,9 @@ li {
 .color-red {
     color: #be2020;
 }
+
+
+
 
 .width-400 {
     width: 400px !important;
@@ -139,9 +154,15 @@ li {
     width: 140px !important;
 }
 
+
+
 .padding-t-10 {
     padding-top: 10px;
 }
+
+
+
+
 
 .bg-body-home {
     background-color: #E3FDFD;
@@ -162,7 +183,7 @@ li {
 }
 
     .create .form-horizontal div:last-child input, .edit .form-horizontal div:last-child input, .edit .form-horizontal div select {
-        margin: 5px 10px 0px 0px;
+        margin: 0px 10px 0px 0px;
         font-size: 12.7px;
     }
 
@@ -225,7 +246,7 @@ li {
     /*dashboard admin top*/
     .dashboard-admin-top {
         width: 100%;
-        background-color: #AF21A1;
+        background-color: #850F8D;
         position: absolute;
     }
 
@@ -316,7 +337,7 @@ li {
         position: absolute;
         left: 10px;
         top: 58px;
-        background-color: #777b7f;
+        background-color: #AF21A1;
         color: white;
         font-size: 7.7px;
         right: 118px;
@@ -326,7 +347,7 @@ li {
         .index > div:first-child {
             display: flex;
             justify-content: space-between;
-            background-color: #3E4149;
+            background-color: #850F8D;
         }
 
             .index > div:first-child h1 {
@@ -357,7 +378,7 @@ li {
 
     /*create*/ /*edit*/
     .create .form-horizontal div, .edit .form-horizontal div {
-        padding: 0px 14px 0px 14px !important;
+        padding: 0px 14px 0px 14px;
     }
 
     .create div:nth-child(2) > div, .edit div:nth-child(2) > div {
@@ -366,7 +387,7 @@ li {
 
     .create .form-horizontal div h4, .edit .form-horizontal div h4 {
         font-size: 12px;
-        text-align: center;
+      /*  text-align: center;*/
         padding-top: 10px;
         text-shadow: 3px 4px 5px black;
     }
@@ -383,7 +404,7 @@ li {
     }
 
     .create .form-horizontal div:nth-child(3) input {
-        margin: 5px 10px 0px 0px;
+        margin: 0px 0px 0px 0px;
     }
 
     .create div div:last-child div:only-child a, .create div div:last-child div:only-child input, .edit div div:last-child div:only-child a, .bottom-font {
@@ -425,10 +446,14 @@ li {
         padding: 5px;
     }
 
+    .padding-left-0 {
+        padding-left: 0px !important;
+    }
+
     .edit .form-horizontal > div:last-child {
         position: relative;
         right: 33px;
-        bottom: 8px;
+        bottom: 0px;
     }
 
     .is-active-checkbox {
@@ -483,7 +508,7 @@ li {
     /*dashboard admin top*/
     .dashboard-admin-top {
         width: 100%;
-        background-color: #AF21A1;
+        background-color: #850F8D;
         position: absolute;
     }
 
@@ -568,7 +593,7 @@ li {
         position: absolute;
         left: 10px;
         top: 80px;
-        background-color: #777b7f;
+        background-color: #AF21A1;
         color: white;
         font-size: 11.7px;
         right: 136px;
@@ -578,7 +603,7 @@ li {
         .index > div:first-child {
             display: flex;
             justify-content: space-between;
-            background-color: #3E4149;
+            background-color: #850F8D;
         }
 
             .index > div:first-child h1 {
@@ -610,7 +635,7 @@ li {
     /*create*/ /*edit*/
     .create .form-horizontal div h4, .edit .form-horizontal div h4 {
         font-size: 16px;
-        text-align: center;
+        /*text-align: center;*/
         padding-top: 10px;
         text-shadow: 3px 4px 5px black;
     }
@@ -643,7 +668,7 @@ li {
     }
 
     .create .form-horizontal > div:nth-child(2) input, .edit .form-horizontal > div:nth-child(2) input {
-        width: 90px;
+        width: 130px;
     }
 
     .input-title {
@@ -681,7 +706,7 @@ li {
 
     .edit .form-horizontal > div:last-child {
         position: relative;
-        right: 90px;
+        right: 0px;
         bottom: 5px;
     }
 
@@ -695,17 +720,17 @@ li {
         }
 
         .edit .form-horizontal > div:nth-child(3) > div:first-child {
-            width: 150px;
+           /* width: 150px;*/
             padding: 0px 0px 0px 0px;
             position: relative;
-            right: 160px;
+            right: 110px;
         }
 
         .edit .form-horizontal > div:nth-child(3) > div:last-child {
             padding: 0px;
-            width: 146px;
+            /*width: 146px;*/
             position: relative;
-            left: 151px;
+            /*left: 151px;*/
         }
 
             .edit .form-horizontal > div:nth-child(3) > div:last-child div {
@@ -786,7 +811,7 @@ li {
     /*dashboard admin top*/
     .dashboard-admin-top {
         width: 100%;
-        background-color: #AF21A1;
+        background-color: #850F8D;
         position: absolute;
     }
 
@@ -869,7 +894,7 @@ li {
         position: absolute;
         left: 0px;
         top: 80px;
-        background-color: #777b7f;
+        background-color: #AF21A1;
         color: white;
         font-size: 12.7px;
         right: 140px;
@@ -879,7 +904,7 @@ li {
         .index > div:first-child {
             display: flex;
             justify-content: space-between;
-            background-color: #3E4149;
+            background-color: #850F8D;
         }
 
             .index > div:first-child h1 {
@@ -905,7 +930,7 @@ li {
 
     .create .form-horizontal div h4, .edit .form-horizontal div h4 {
         font-size: 17px;
-        text-align: center;
+        /*text-align: center;*/
         padding: 15px;
         text-shadow: 3px 4px 5px black;
     }
@@ -960,7 +985,7 @@ li {
 
     .edit .form-horizontal > div:last-child {
         position: relative;
-        right: 175px;
+        /*right: 175px;*/
         bottom: 5px;
     }
 
@@ -974,17 +999,17 @@ li {
         }
 
         .edit .form-horizontal > div:nth-child(3) > div:first-child {
-            width: 190px;
+            /*width: 190px;*/
             padding: 0px 0px 0px 0px;
             position: relative;
-            right: 220px;
+            right: 190px;
         }
 
         .edit .form-horizontal > div:nth-child(3) > div:last-child {
             padding: 0px;
-            width: 146px;
+            /*width: 146px;*/
             position: relative;
-            left: 245px;
+            /*left: 245px;*/
         }
 
             .edit .form-horizontal > div:nth-child(3) > div:last-child div {
@@ -1064,7 +1089,7 @@ li {
     /*dashboard admin top*/
     .dashboard-admin-top {
         width: 100%;
-        background-color: #AF21A1;
+        background-color: #850F8D;
         position: absolute;
     }
 
@@ -1148,7 +1173,7 @@ li {
         position: absolute;
         left: 0px;
         top: 80px;
-        background-color: #777b7f;
+        background-color: #AF21A1;
         color: white;
         font-size: 14.7px;
         right: 145px;
@@ -1158,7 +1183,7 @@ li {
         .index > div:first-child {
             display: flex;
             justify-content: space-between;
-            background-color: #3E4149;
+            background-color: #850F8D;
         }
 
             .index > div:first-child h1 {
@@ -1184,7 +1209,7 @@ li {
 
     .create .form-horizontal div h4, .edit .form-horizontal div h4 {
         font-size: 18px;
-        text-align: center;
+        /*text-align: center;*/
         padding: 16px;
         text-shadow: 3px 4px 5px black;
     }
@@ -1242,7 +1267,7 @@ li {
 
     .edit .form-horizontal > div:last-child {
         position: relative;
-        right: 300px;
+        /*right: 300px;*/
         bottom: 5px;
     }
 
@@ -1261,7 +1286,7 @@ li {
     }
 
     .edit .form-horizontal > div:nth-child(3) > div:first-child {
-        width: 235px;
+        /*width: 235px;*/
         padding: 0px 0px 0px 0px;
         position: relative;
         right: 303px;
@@ -1269,7 +1294,7 @@ li {
 
     .edit .form-horizontal > div:nth-child(3) > div:last-child {
         padding: 0px;
-        width: 146px;
+        /*width: 146px;*/
         position: relative;
         left: 385px;
     }
@@ -1352,7 +1377,7 @@ li {
     /*dashboard admin top*/
     .dashboard-admin-top {
         width: 100%;
-        background-color: #AF21A1;
+        background-color: #850F8D;
         position: absolute;
     }
 
@@ -1437,7 +1462,7 @@ li {
         position: absolute;
         left: 0px;
         top: 83px;
-        background-color: #777b7f;
+        background-color: #AF21A1;
         color: white;
         font-size: 16.7px;
         right: 150px;
@@ -1447,7 +1472,7 @@ li {
         .index > div:first-child {
             display: flex;
             justify-content: space-between;
-            background-color: #3E4149;
+            background-color: #850F8D;
         }
 
             .index > div:first-child h1 {
@@ -1473,7 +1498,7 @@ li {
 
     .create .form-horizontal div h4, .edit .form-horizontal div h4 {
         font-size: 19px;
-        text-align: center;
+        /*text-align: center;*/
         padding: 15px;
         text-shadow: 3px 4px 5px black;
     }
@@ -1532,7 +1557,7 @@ li {
 
     .edit .form-horizontal > div:last-child {
         position: relative;
-        right: 503px;
+        /*right: 503px;*/
         bottom: 5px;
     }
 
@@ -1551,17 +1576,17 @@ li {
     }
 
     .edit .form-horizontal > div:nth-child(3) > div:first-child {
-        width: 235px;
+        /*width: 235px;*/
         padding: 0px 0px 0px 0px;
         position: relative;
-        right: 446px;
+        right: 516px;
     }
 
     .edit .form-horizontal > div:nth-child(3) > div:last-child {
         padding: 0px;
-        width: 146px;
+        /*width: 146px;*/
         position: relative;
-        left: 527px;
+        left: 520px;
     }
 
         .edit .form-horizontal > div:nth-child(3) > div:last-child div {
@@ -1642,7 +1667,7 @@ li {
     /*dashboard admin top*/
     .dashboard-admin-top {
         width: 100%;
-        background-color: #AF21A1;
+        background-color: #850F8D;
         position: absolute;
     }
 
@@ -1728,7 +1753,7 @@ li {
         position: absolute;
         left: 0px;
         top: 83px;
-        background-color: #777b7f;
+        background-color: #AF21A1;
         color: white;
         font-size: 16.7px;
         right: 150px;
@@ -1738,7 +1763,7 @@ li {
         .index > div:first-child {
             display: flex;
             justify-content: space-between;
-            background-color: #3E4149;
+            background-color: #850F8D;
         }
 
             .index > div:first-child h1 {
@@ -1765,7 +1790,7 @@ li {
 
     .create .form-horizontal div h4, .edit .form-horizontal div h4 {
         font-size: 20px;
-        text-align: center;
+        /*text-align: center;*/
         padding: 15px;
         text-shadow: 3px 4px 5px black;
     }
@@ -1823,7 +1848,7 @@ li {
 
     .edit .form-horizontal > div:last-child {
         position: relative;
-        right: 693px;
+        /*right: 693px;*/
         bottom: 5px;
     }
 
@@ -1842,15 +1867,15 @@ li {
     }
 
     .edit .form-horizontal > div:nth-child(3) > div:first-child {
-        width: 240px;
+        /*width: 240px;*/
         padding: 0px 0px 0px 0px;
         position: relative;
-        right: 580px;
+        right: 700px;
     }
 
     .edit .form-horizontal > div:nth-child(3) > div:last-child {
         padding: 0px;
-        width: 146px;
+        /*width: 146px;*/
         position: relative;
         left: 660px;
     }
