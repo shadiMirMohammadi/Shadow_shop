@@ -18,6 +18,10 @@ namespace Shadow_shop.App_Start
             {
                 t.CreateMap<Role, RoleViewModel>().IgnoreAllPropertiesWithAnInaccessibleSetter();
                 t.CreateMap<RoleViewModel, Role>().IgnoreAllPropertiesWithAnInaccessibleSetter();
+
+
+                t.CreateMap<ProductCategory, ProductCategoryViewModel>().IgnoreAllPropertiesWithAnInaccessibleSetter();
+                t.CreateMap<ProductCategoryViewModel, ProductCategory>().IgnoreAllPropertiesWithAnInaccessibleSetter();
             });
             mapper = configuration.CreateMapper();
         }
