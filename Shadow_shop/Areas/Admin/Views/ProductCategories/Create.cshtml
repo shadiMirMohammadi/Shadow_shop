@@ -1,0 +1,54 @@
+﻿@model Shadow_shop.Views.ViewModels.ProductCategoryViewModel
+
+@{
+    ViewBag.Title = "ثبت دسته بندی جدید |";
+}
+@using (Html.BeginForm("Create", "", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="create">
+        <div class="form-horizontal">
+            <div>
+                <h4>ثبت دسته بندی جدید </h4>
+            </div>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div>
+                <div class="flex-right">
+                    <div class="form-group flex">
+                        @Html.LabelFor(model => model.ParentCategoryId, htmlAttributes: new { @class = "control-label  " })
+                        <div class="col-count">
+                            <select name="ParentCategoryId" class="form-control font-size-select">
+                                <option value="1">دسته بندی نشده</option>
+                                <option value="2">مو</option>
+                                <option value="3">رنگ مو</option>
+                                <option value="4">صورت</option>
+                                <option value="5">چشم و ابرو</option>
+                                <option value="6">لب</option>
+                                <option value="7">مراقبت پوست</option>
+                                <option value="8">مراقبت مو</option>
+                            </select>
+                            @Html.ValidationMessageFor(model => model.ParentCategoryId, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-right">
+                    <div class="form-group flex">
+                        @Html.LabelFor(model => model.CategoryName, htmlAttributes: new { @class = "control-label  " })
+                        <div class="col-count">
+                            @Html.EditorFor(model => model.CategoryName, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.CategoryName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row padding-left-0">
+                <div class="col margin-b-5 ">
+                    @Html.ActionLink("بازگشت به لیست", "Index", null, new { @class = "btn btn-info padding-t-10  margin-l-5" })
+                    <input type="submit" value="ثبت" class="btn btn-success" />
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
