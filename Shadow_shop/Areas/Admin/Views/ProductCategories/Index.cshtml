@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Shadow_shop.Views.ViewModels.ProductCategoryViewModel>
+
+@{
+    ViewBag.Title = " دسته بندی ها |";
+    int count = 1;
+}
+
+<div class="index">
+    <div>
+        <h1>لیست دسته بندی ها</h1>
+        <div>
+            @Html.ActionLink("ثبت دسته بندی جدید", "Create", null, new { @class = "btn-color btn btn-success" })
+        </div>
+    </div>
+    <div class="flex-space-around">
+        <div class="table-col">
+            ردیف
+        </div>
+        <div class="table-col">
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </div>
+        <div class="table-col-operation width-140">
+            عملیات
+        </div>
+    </div>
+    @foreach (var item in Model)
+    {
+        <div class="flex-space-around">
+            <div class="table-col">
+                @count
+            </div>
+            <div class="table-col">
+                @Html.DisplayFor(modelItem => item.CategoryName)
+            </div>
+            <div class="table-col-operation width-140 ">
+                @Html.ActionLink("ویرایش", "Edit", new { id = item.Id }, new { @class = "btn btn-warning" })
+
+                @if (item.ParentCategoryId != 0)
+                {
+                    @Html.ActionLink("حذف", "Delete", new { id = item.Id }, new { @class = "btn btn-danger margin-r-5 margin-l-5" })
+                }
+            </div>
+        </div>
+        count++;
+    }
+</div>
+
+<script src="~/Scripts/site.js"></script>
+
