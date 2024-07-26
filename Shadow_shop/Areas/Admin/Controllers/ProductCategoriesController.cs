@@ -107,7 +107,6 @@ namespace Shadow_shop.Areas.Admin.Controllers
                 return HttpNotFound();
             }
             var productCategoryViewModel = AutoMapperConfig.mapper.Map<ProductCategory, ProductCategoryViewModel>(productCategory);
-
             return View(productCategoryViewModel);
         }
 
@@ -121,21 +120,6 @@ namespace Shadow_shop.Areas.Admin.Controllers
             _ProductCategoryService.Save();
             return RedirectToAction("Index");
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         protected override void Dispose(bool disposing)

@@ -1,0 +1,36 @@
+﻿@model Shadow_shop.Views.ViewModels.ProductCategoryViewModel
+
+@{
+    ViewBag.Title = $"حذف دسته بندی : {Model.CategoryName} |";
+}
+
+@using (Html.BeginForm("Delete", "", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="create delete">
+        <div class="form-horizontal">
+            <div>
+                <h4> دسته بندی : @Model.CategoryName</h4>
+            </div>
+            <div class="flex-right">
+                <div class="form-group flex">
+                    <div class="col-count">
+                        <p>
+                            از حذف
+                            <span class="categoryname-color">
+                                @Html.LabelFor(model => model.CategoryName, htmlAttributes: new { @class = "control-label  " })
+                                @Html.DisplayFor(model => model.CategoryName)
+                            </span>
+                            مطمئن هستید؟
+                        </p>   
+                        @Html.ActionLink("بازگشت به لیست", "Index", null, new { @class = "btn btn-info padding-t-10  margin-l-5" })
+                        <input type="submit" value="حذف" class="btn btn-danger margin-l-5 bottom-font" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+}
+
+
